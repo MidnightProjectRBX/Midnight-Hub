@@ -9,7 +9,7 @@ This script is based off a gta mod menu (Midnight)
   All Credits to midnight for the name idea and the ui idea
  UI was converted by Lucix Convert
 ]]
-www.roblox.com/games/8811446235/HALLOWEEN-FORTBLOX
+-- www.roblox.com/games/8811446235/HALLOWEEN-FORTBLOX
 --// SOURCE CODE \\--
 
 local UI = game.CoreGui:FindFirstChild("ModMenu")
