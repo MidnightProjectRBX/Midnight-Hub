@@ -12,6 +12,10 @@ This script is based off a gta mod menu (Midnight)
 www.roblox.com/games/8811446235/HALLOWEEN-FORTBLOX
 --// SOURCE CODE \\--
 
+local UI = game.CoreGui:FindFirstChild("ModMenu")
+if UI then
+       UI:Destroy()
+    end
 self = {}
 self.ModMenu = Instance.new("ScreenGui")
 self.Popups = Instance.new("Frame")
