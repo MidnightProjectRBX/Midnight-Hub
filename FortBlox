@@ -6,10 +6,12 @@ MIDNIGHT 1.0
 Made by cylix & rec
 
 This script is based off a gta mod menu (Midnight) 
-  All Credits to midnight for the name idea and the ui idea
  UI was converted by Lucix Convert
+  www.roblox.com/games/8811446235/HALLOWEEN-FORTBLOX
+  
+  
+ ' - ' to open and close the gui
 ]]
--- www.roblox.com/games/8811446235/HALLOWEEN-FORTBLOX
 --// SOURCE CODE \\--
 
 local UI = game.CoreGui:FindFirstChild("ModMenu")
@@ -63,15 +65,15 @@ self.RandomSkin = Instance.new("Frame")
 self.UICorner_10 = Instance.new("UICorner")
 self.ImageButton_2 = Instance.new("ImageButton")
 self.Name_3 = Instance.new("TextLabel")
-self.Apply = Instance.new("Frame")
-self.UICorner_11 = Instance.new("UICorner")
-self.ImageButton_3 = Instance.new("ImageButton")
-self.Name_4 = Instance.new("TextLabel")
 self.SkinsList = Instance.new("ScrollingFrame")
 self.UIListLayout_3 = Instance.new("UIListLayout")
-self.Name_5 = Instance.new("Frame")
+self.Cylixes = Instance.new("Frame")
 self.Box = Instance.new("TextBox")
+self.UICorner_11 = Instance.new("UICorner")
+self.Apply = Instance.new("Frame")
 self.UICorner_12 = Instance.new("UICorner")
+self.ImageButton_3 = Instance.new("ImageButton")
+self.Name_4 = Instance.new("TextLabel")
 self.SkinName = Instance.new("Frame")
 self.UICorner_13 = Instance.new("UICorner")
 self.ImageButton_4 = Instance.new("ImageButton")
@@ -84,7 +86,7 @@ self.EspFloorLoot = Instance.new("Frame")
 self.ToggleCheck_2 = Instance.new("TextButton")
 self.UICorner_15 = Instance.new("UICorner")
 self.Checkmarked_2 = Instance.new("ImageLabel")
-self.Name_6 = Instance.new("TextLabel")
+self.Name_5 = Instance.new("TextLabel")
 
 self.ModMenu.Name = "ModMenu"
 self.ModMenu.Parent = game:GetService('CoreGui')
@@ -432,14 +434,54 @@ self.Name_3.TextColor3 = Color3.fromRGB(194, 194, 194)
 self.Name_3.TextSize = 15.000
 self.Name_3.TextWrapped = true
 
-self.Apply.Name = "Apply"
-self.Apply.Parent = self.Skins
-self.Apply.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
-self.Apply.Position = UDim2.new(0.069631815, 0, 0.454252958, 0)
-self.Apply.Size = UDim2.new(0, 167, 0, 27)
+self.SkinsList.Name = "SkinsList"
+self.SkinsList.Parent = self.Skins
+self.SkinsList.Active = true
+self.SkinsList.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.SkinsList.BackgroundTransparency = 1.000
+self.SkinsList.BorderSizePixel = 0
+self.SkinsList.Position = UDim2.new(0.0771642402, 0, 0.580623388, 0)
+self.SkinsList.Size = UDim2.new(0, 165, 0, 120)
+self.SkinsList.ZIndex = 2
+self.SkinsList.CanvasSize = UDim2.new(0, 0, 10, 0)
+self.SkinsList.ScrollBarThickness = 3
+self.SkinsList.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+
+self.UIListLayout_3.Parent = self.SkinsList
+self.UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+self.UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+self.UIListLayout_3.Padding = UDim.new(0, 2)
+
+self.Cylixes.Name = "Cylixes"
+self.Cylixes.Parent = self.Skins
+self.Cylixes.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+self.Cylixes.Position = UDim2.new(0.069631815, 0, 0.337369859, 0)
+self.Cylixes.Size = UDim2.new(0, 167, 0, 27)
+
+self.Box.Name = "Box"
+self.Box.Parent = self.Cylixes
+self.Box.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.Box.BackgroundTransparency = 1.000
+self.Box.Position = UDim2.new(0.0567897409, 0, 0.0370370373, 0)
+self.Box.Size = UDim2.new(0, 156, 0, 24)
+self.Box.Font = Enum.Font.SourceSans
+self.Box.PlaceholderText = "Skin Name"
+self.Box.Text = ""
+self.Box.TextColor3 = Color3.fromRGB(214, 214, 214)
+self.Box.TextSize = 17.000
+self.Box.TextXAlignment = Enum.TextXAlignment.Left
 
 self.UICorner_11.CornerRadius = UDim.new(0, 4)
-self.UICorner_11.Parent = self.Apply
+self.UICorner_11.Parent = self.Cylixes
+
+self.Apply.Name = "Apply"
+self.Apply.Parent = self.Cylixes
+self.Apply.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+self.Apply.Position = UDim2.new(0.00376354903, 0, 1.34314179, 0)
+self.Apply.Size = UDim2.new(0, 167, 0, 27)
+
+self.UICorner_12.CornerRadius = UDim.new(0, 4)
+self.UICorner_12.Parent = self.Apply
 
 self.ImageButton_3.Parent = self.Apply
 self.ImageButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -461,46 +503,6 @@ self.Name_4.Text = "Apply Skin"
 self.Name_4.TextColor3 = Color3.fromRGB(194, 194, 194)
 self.Name_4.TextSize = 15.000
 self.Name_4.TextWrapped = true
-
-self.SkinsList.Name = "SkinsList"
-self.SkinsList.Parent = self.Skins
-self.SkinsList.Active = true
-self.SkinsList.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
-self.SkinsList.BackgroundTransparency = 1.000
-self.SkinsList.BorderSizePixel = 0
-self.SkinsList.Position = UDim2.new(0.0771642402, 0, 0.580623388, 0)
-self.SkinsList.Size = UDim2.new(0, 165, 0, 120)
-self.SkinsList.ZIndex = 2
-self.SkinsList.CanvasSize = UDim2.new(0, 0, 10, 0)
-self.SkinsList.ScrollBarThickness = 3
-self.SkinsList.VerticalScrollBarInset = Enum.ScrollBarInset.Always
-
-self.UIListLayout_3.Parent = self.SkinsList
-self.UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
-self.UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
-self.UIListLayout_3.Padding = UDim.new(0, 2)
-
-self.Name_5.Name = "Name"
-self.Name_5.Parent = self.Skins
-self.Name_5.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
-self.Name_5.Position = UDim2.new(0.069631815, 0, 0.337369859, 0)
-self.Name_5.Size = UDim2.new(0, 167, 0, 27)
-
-self.Box.Name = "Box"
-self.Box.Parent = self.Name_5
-self.Box.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-self.Box.BackgroundTransparency = 1.000
-self.Box.Position = UDim2.new(0.0567897409, 0, 0.0370370373, 0)
-self.Box.Size = UDim2.new(0, 156, 0, 24)
-self.Box.Font = Enum.Font.SourceSans
-self.Box.PlaceholderText = "Skin Name"
-self.Box.Text = ""
-self.Box.TextColor3 = Color3.fromRGB(214, 214, 214)
-self.Box.TextSize = 17.000
-self.Box.TextXAlignment = Enum.TextXAlignment.Left
-
-self.UICorner_12.CornerRadius = UDim.new(0, 4)
-self.UICorner_12.Parent = self.Name_5
 
 self.SkinName.Name = "SkinName"
 self.SkinName.Parent = self.Skins
@@ -597,23 +599,23 @@ self.Checkmarked_2.Size = UDim2.new(0, 26, 0, 26)
 self.Checkmarked_2.Visible = false
 self.Checkmarked_2.Image = "http://www.roblox.com/asset/?id=1202200114"
 
-self.Name_6.Name = "Name"
-self.Name_6.Parent = self.EspFloorLoot
-self.Name_6.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
-self.Name_6.BackgroundTransparency = 1.000
-self.Name_6.Position = UDim2.new(0.218586117, 0, 0.692137003, 0)
-self.Name_6.Size = UDim2.new(0, 143, 0, 17)
-self.Name_6.Font = Enum.Font.SourceSans
-self.Name_6.LineHeight = 1.440
-self.Name_6.Text = "Floorloot esp"
-self.Name_6.TextColor3 = Color3.fromRGB(194, 194, 194)
-self.Name_6.TextSize = 15.000
-self.Name_6.TextWrapped = true
-self.Name_6.TextXAlignment = Enum.TextXAlignment.Left
+self.Name_5.Name = "Name"
+self.Name_5.Parent = self.EspFloorLoot
+self.Name_5.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.Name_5.BackgroundTransparency = 1.000
+self.Name_5.Position = UDim2.new(0.218586117, 0, 0.692137003, 0)
+self.Name_5.Size = UDim2.new(0, 143, 0, 17)
+self.Name_5.Font = Enum.Font.SourceSans
+self.Name_5.LineHeight = 1.440
+self.Name_5.Text = "Floorloot esp"
+self.Name_5.TextColor3 = Color3.fromRGB(194, 194, 194)
+self.Name_5.TextSize = 15.000
+self.Name_5.TextWrapped = true
+self.Name_5.TextXAlignment = Enum.TextXAlignment.Left
 
 
 -- Scripts:
-local function CLGZ_fake_script() -- A.LocalScript 
+local function XANRZY_fake_script() -- A.LocalScript 
 	local script = Instance.new('LocalScript', self.A)
 
 	local CheckGui = game.CoreGui:FindFirstChild('ModMenu')
@@ -645,8 +647,8 @@ local function CLGZ_fake_script() -- A.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(CLGZ_fake_script)()
-local function AHCYF_fake_script() -- A_2.LocalScript 
+coroutine.wrap(XANRZY_fake_script)()
+local function VQLREIH_fake_script() -- A_2.LocalScript 
 	local script = Instance.new('LocalScript', self.A_2)
 
 	local CheckGui = game.CoreGui:FindFirstChild('ModMenu')
@@ -678,8 +680,8 @@ local function AHCYF_fake_script() -- A_2.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(AHCYF_fake_script)()
-local function NBBQ_fake_script() -- ToggleCheck.LocalScript 
+coroutine.wrap(VQLREIH_fake_script)()
+local function GCQQ_fake_script() -- ToggleCheck.LocalScript 
 	local script = Instance.new('LocalScript', self.ToggleCheck)
 
 	
@@ -703,8 +705,8 @@ local function NBBQ_fake_script() -- ToggleCheck.LocalScript
 		updateScreen()
 	end)
 end
-coroutine.wrap(NBBQ_fake_script)()
-local function LCHG_fake_script() -- ImageButton_2.LocalScript 
+coroutine.wrap(GCQQ_fake_script)()
+local function TPNZWRZ_fake_script() -- ImageButton_2.LocalScript 
 	local script = Instance.new('LocalScript', self.ImageButton_2)
 
 	
@@ -777,29 +779,8 @@ local function LCHG_fake_script() -- ImageButton_2.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(LCHG_fake_script)()
-local function CSZSULV_fake_script() -- ImageButton_3.LocalScript 
-	local script = Instance.new('LocalScript', self.ImageButton_3)
-
-	local Frame = script.Parent.Parent.Parent.Apply
-	script.Parent.MouseEnter:Connect(function()
-		Frame.BackgroundColor3 = Color3.fromRGB(26, 38, 48)
-	end)
-	script.Parent.MouseLeave:Connect(function()
-		Frame.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
-		script.Parent.MouseButton1Click:Connect(function()
-			game:GetService("ReplicatedStorage").Remotes.Skin69:FireServer(script.Parent.Parent.Parent.Name.Box.Text)
-		end)
-		script.Parent.MouseButton1Down:Connect(function()
-			Frame.BackgroundColor3 = Color3.fromRGB(30, 45, 57)
-		end)
-		script.Parent.MouseButton1Up:Connect(function()
-			Frame.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
-		end)
-	end)
-end
-coroutine.wrap(CSZSULV_fake_script)()
-local function GPXNO_fake_script() -- Skins.LocalScript 
+coroutine.wrap(TPNZWRZ_fake_script)()
+local function LLYNO_fake_script() -- Skins.LocalScript 
 	local script = Instance.new('LocalScript', self.Skins)
 
 	local Skins = {
@@ -860,8 +841,28 @@ local function GPXNO_fake_script() -- Skins.LocalScript
 		UIC.Name = v
 	end
 end
-coroutine.wrap(GPXNO_fake_script)()
-local function LCPOS_fake_script() -- ToggleCheck_2.LocalScript 
+coroutine.wrap(LLYNO_fake_script)()
+local function GVLG_fake_script() -- ImageButton_3.LocalScript 
+	local script = Instance.new('LocalScript', self.ImageButton_3)
+
+	local Frame = script.Parent.Parent.Parent.Apply
+	script.Parent.MouseEnter:Connect(function()
+		Frame.BackgroundColor3 = Color3.fromRGB(26, 38, 48)
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		Frame.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+	end)
+	
+		script.Parent.MouseButton1Down:Connect(function()
+			Frame.BackgroundColor3 = Color3.fromRGB(30, 45, 57)
+		end)
+	 script.Parent.MouseButton1Up:Connect(function()
+		game:GetService("ReplicatedStorage").Remotes.Skin69:FireServer(script.Parent.Parent.Parent.Box.Text)
+			Frame.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+		end)
+end
+coroutine.wrap(GVLG_fake_script)()
+local function OZYT_fake_script() -- ToggleCheck_2.LocalScript 
 	local script = Instance.new('LocalScript', self.ToggleCheck_2)
 
 	
@@ -931,8 +932,8 @@ local function LCPOS_fake_script() -- ToggleCheck_2.LocalScript
 		updateScreen()
 	end)
 end
-coroutine.wrap(LCPOS_fake_script)()
-local function KTXMO_fake_script() -- MainFrame.Dragify 
+coroutine.wrap(OZYT_fake_script)()
+local function BVRRA_fake_script() -- MainFrame.Dragify 
 	local script = Instance.new('LocalScript', self.MainFrame)
 
 	local UIS = game:GetService("UserInputService")
@@ -978,8 +979,8 @@ local function KTXMO_fake_script() -- MainFrame.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(KTXMO_fake_script)()
-local function FJEY_fake_script() -- ModMenu.Keybind Script 
+coroutine.wrap(BVRRA_fake_script)()
+local function FGQR_fake_script() -- ModMenu.Keybind Script 
 	local script = Instance.new('LocalScript', self.ModMenu)
 
 	local UIS = game:GetService("UserInputService")
@@ -1001,4 +1002,5 @@ local function FJEY_fake_script() -- ModMenu.Keybind Script
 	end)
 	
 end
-coroutine.wrap(FJEY_fake_script)()
+coroutine.wrap(FGQR_fake_script)()
+
