@@ -1,6 +1,6 @@
 (>- Updates -<)
 
-[+] execute tracker <<] to track who uses our script and when, ( THIS WILL ONLY TRACK YOUR USER, USERID, TIME EXECUTED )
+[+] execute tracker <<] to track who uses our script and when, > THIS WILL ONLY TRACK YOUR USER, USERID, TIME EXECUTED
 [+] Option to remove executed tracker <<] will be remove when script is fully out
 
 (>- LoadString -<)
