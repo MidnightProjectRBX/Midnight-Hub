@@ -6,4 +6,4 @@
 
 (>- LoadString -<)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/MidnightProjectRBX/Midnight-Hub/main/FortBlox?token=GHSAT0AAAAAABZTEGI3NFD2WAYGAGPBWCLOY2A5FPQ"))()
+https://raw.githubusercontent.com/MidnightProjectRBX/Midnight-Hub/main/FortBlox
