@@ -1,4 +1,4 @@
-(>- Updates -<)
+(>- BETA Updates -<)
 
 [+] execute tracker <<] to track who uses our script and when, > THIS WILL ONLY TRACK YOUR USER, USERID, TIME EXECUTED
 
@@ -6,4 +6,4 @@
 
 (>- LoadString -<)
 
-https://raw.githubusercontent.com/MidnightProjectRBX/Midnight-Hub/main/FortBlox
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MidnightProjectRBX/Midnight-Hub/main/FortBlox"))()
