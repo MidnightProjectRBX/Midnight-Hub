@@ -1,0 +1,1173 @@
+
+
+--[[
+MIDNIGHT 1.0
+
+Made by cylix & rec
+
+This script is based off a gta mod menu (Midnight) 
+ UI was converted with Lucix Convert
+  www.roblox.com/games/8811446235/HALLOWEEN-FORTBLOX
+  
+  
+ ' - ' to open and close the gui
+]]
+--// SOURCE CODE \\--
+
+local UI = game.CoreGui:FindFirstChild("ModMenu")
+if UI then
+       UI:Destroy()
+    end
+    
+    -- Lucix Convert
+-- Version: 4.1.2
+self = {}
+self.ModMenu = Instance.new("ScreenGui")
+self.Popups = Instance.new("Frame")
+self.UIListLayout = Instance.new("UIListLayout")
+self.MainFrame = Instance.new("Frame")
+self.UICorner = Instance.new("UICorner")
+self.SideList = Instance.new("Frame")
+self.List = Instance.new("ScrollingFrame")
+self.Entites = Instance.new("TextLabel")
+self.Entites_2 = Instance.new("Frame")
+self.Self = Instance.new("Frame")
+self.A = Instance.new("TextButton")
+self.TextLabel = Instance.new("TextLabel")
+self.ImageLabel = Instance.new("ImageLabel")
+self.UICorner_2 = Instance.new("UICorner")
+self.UIListLayout_2 = Instance.new("UIListLayout")
+self.World = Instance.new("Frame")
+self.A_2 = Instance.new("TextButton")
+self.ImageLabel_2 = Instance.new("ImageLabel")
+self.UICorner_3 = Instance.new("UICorner")
+self.TextLabel_2 = Instance.new("TextLabel")
+self.UIListLayout_3 = Instance.new("UIListLayout")
+self.Misc = Instance.new("TextLabel")
+self.Misc_2 = Instance.new("Frame")
+self.UIListLayout_4 = Instance.new("UIListLayout")
+self.Settings = Instance.new("Frame")
+self.A_3 = Instance.new("TextButton")
+self.ImageLabel_3 = Instance.new("ImageLabel")
+self.UICorner_4 = Instance.new("UICorner")
+self.TextLabel_3 = Instance.new("TextLabel")
+self.UICorner_5 = Instance.new("UICorner")
+self.Frame = Instance.new("Frame")
+self.Tabs = Instance.new("Folder")
+self.Self_2 = Instance.new("ScrollingFrame")
+self.Modifers = Instance.new("Frame")
+self.UICorner_6 = Instance.new("UICorner")
+self.TabName = Instance.new("TextLabel")
+self.Godmode = Instance.new("Frame")
+self.ToggleCheck = Instance.new("TextButton")
+self.UICorner_7 = Instance.new("UICorner")
+self.Checkmarked = Instance.new("ImageLabel")
+self.Name = Instance.new("TextLabel")
+self.Actions = Instance.new("Frame")
+self.UICorner_8 = Instance.new("UICorner")
+self.TabName_2 = Instance.new("TextLabel")
+self.Sucide = Instance.new("Frame")
+self.UICorner_9 = Instance.new("UICorner")
+self.ImageButton = Instance.new("ImageButton")
+self.Name_2 = Instance.new("TextLabel")
+self.Stats = Instance.new("Frame")
+self.UICorner_10 = Instance.new("UICorner")
+self.TabName_3 = Instance.new("TextLabel")
+self.MoneyAmoubt = Instance.new("Frame")
+self.Box = Instance.new("TextBox")
+self.UICorner_11 = Instance.new("UICorner")
+self.Give = Instance.new("Frame")
+self.UICorner_12 = Instance.new("UICorner")
+self.ImageButton_2 = Instance.new("ImageButton")
+self.Name_3 = Instance.new("TextLabel")
+self.World_2 = Instance.new("ScrollingFrame")
+self.Spawner = Instance.new("Frame")
+self.UICorner_13 = Instance.new("UICorner")
+self.TabName_4 = Instance.new("TextLabel")
+self.Respawnnearestchest = Instance.new("Frame")
+self.UICorner_14 = Instance.new("UICorner")
+self.ImageButton_3 = Instance.new("ImageButton")
+self.Name_4 = Instance.new("TextLabel")
+self.Esp = Instance.new("Frame")
+self.UICorner_15 = Instance.new("UICorner")
+self.TabName_5 = Instance.new("TextLabel")
+self.EspFloorLoot = Instance.new("Frame")
+self.ToggleCheck_2 = Instance.new("TextButton")
+self.UICorner_16 = Instance.new("UICorner")
+self.Checkmarked_2 = Instance.new("ImageLabel")
+self.Name_5 = Instance.new("TextLabel")
+self.Settings_2 = Instance.new("ScrollingFrame")
+self.Actions_2 = Instance.new("Frame")
+self.UICorner_17 = Instance.new("UICorner")
+self.TabName_6 = Instance.new("TextLabel")
+self.Sucide_2 = Instance.new("Frame")
+self.UICorner_18 = Instance.new("UICorner")
+self.ImageButton_4 = Instance.new("ImageButton")
+self.Name_6 = Instance.new("TextLabel")
+self.CreateSave = Instance.new("Frame")
+self.UICorner_19 = Instance.new("UICorner")
+self.TabName_7 = Instance.new("TextLabel")
+self.SkinName = Instance.new("Frame")
+self.UICorner_20 = Instance.new("UICorner")
+self.ImageButton_5 = Instance.new("ImageButton")
+self.Name_7 = Instance.new("TextLabel")
+self.Text = Instance.new("Frame")
+self.Box_2 = Instance.new("TextBox")
+self.UICorner_21 = Instance.new("UICorner")
+self.UIStroke = Instance.new("UIStroke")
+
+self.ModMenu.Name = "ModMenu"
+self.ModMenu.Parent = game:GetService('CoreGui')
+self.ModMenu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+self.Popups.Name = "Popups"
+self.Popups.Parent = self.ModMenu
+self.Popups.AnchorPoint = Vector2.new(1, 1)
+self.Popups.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+self.Popups.BackgroundTransparency = 1.000
+self.Popups.Position = UDim2.new(1.01153731, 0, 0.988564491, 0)
+self.Popups.Size = UDim2.new(0, 263, 0, 572)
+
+self.UIListLayout.Parent = self.Popups
+self.UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+self.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+self.UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
+self.UIListLayout.Padding = UDim.new(0, 20)
+
+self.MainFrame.Name = "MainFrame"
+self.MainFrame.Parent = self.ModMenu
+self.MainFrame.BackgroundColor3 = Color3.fromRGB(6, 11, 15)
+self.MainFrame.Position = UDim2.new(0.130241379, 0, 0.211469144, 0)
+self.MainFrame.Size = UDim2.new(0, 755, 0, 423)
+
+self.UICorner.CornerRadius = UDim.new(0, 7)
+self.UICorner.Parent = self.MainFrame
+
+self.SideList.Name = "SideList"
+self.SideList.Parent = self.MainFrame
+self.SideList.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.SideList.BorderColor3 = Color3.fromRGB(27, 42, 53)
+self.SideList.BorderSizePixel = 0
+self.SideList.Size = UDim2.new(0, 193, 0, 423)
+
+self.List.Name = "List"
+self.List.Parent = self.SideList
+self.List.Active = true
+self.List.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.List.BackgroundTransparency = 1.000
+self.List.BorderSizePixel = 0
+self.List.Position = UDim2.new(0, 0, 0.0165484641, 0)
+self.List.Size = UDim2.new(0, 193, 0, 416)
+self.List.ScrollBarThickness = 0
+self.List.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+self.List.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+self.Entites.Name = "Entites"
+self.Entites.Parent = self.List
+self.Entites.BackgroundColor3 = Color3.fromRGB(33, 38, 61)
+self.Entites.BackgroundTransparency = 1.000
+self.Entites.Position = UDim2.new(0.134396628, 0, 0.00751355384, 0)
+self.Entites.Size = UDim2.new(0, 167, 0, 22)
+self.Entites.Font = Enum.Font.SourceSans
+self.Entites.Text = "Entites"
+self.Entites.TextColor3 = Color3.fromRGB(21, 33, 54)
+self.Entites.TextSize = 15.000
+self.Entites.TextWrapped = true
+self.Entites.TextXAlignment = Enum.TextXAlignment.Left
+
+self.Entites_2.Name = "Entites"
+self.Entites_2.Parent = self.Entites
+self.Entites_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.Entites_2.BackgroundTransparency = 1.000
+self.Entites_2.Position = UDim2.new(-0.0415748097, 0, 1.37265742, 0)
+self.Entites_2.Size = UDim2.new(0, 160, 0, 186)
+
+self.Self.Name = "Self"
+self.Self.Parent = self.Entites_2
+self.Self.BackgroundColor3 = Color3.fromRGB(191, 191, 191)
+self.Self.BackgroundTransparency = 1.000
+self.Self.Position = UDim2.new(0.0420391075, 0, 0.182804674, 0)
+self.Self.Size = UDim2.new(0, 160, 0, 34)
+
+self.A.Name = "A"
+self.A.Parent = self.Self
+self.A.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.A.BackgroundTransparency = 1.000
+self.A.Size = UDim2.new(0, 160, 0, 34)
+self.A.Font = Enum.Font.SourceSans
+self.A.Text = ""
+self.A.TextColor3 = Color3.fromRGB(0, 0, 0)
+self.A.TextSize = 14.000
+
+self.TextLabel.Parent = self.Self
+self.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.TextLabel.BackgroundTransparency = 1.000
+self.TextLabel.Position = UDim2.new(0.405999988, 0, 0.294, 0)
+self.TextLabel.Size = UDim2.new(0, 108, 0, 14)
+self.TextLabel.Font = Enum.Font.SourceSans
+self.TextLabel.Text = "Self"
+self.TextLabel.TextColor3 = Color3.fromRGB(162, 162, 162)
+self.TextLabel.TextScaled = true
+self.TextLabel.TextSize = 16.000
+self.TextLabel.TextWrapped = true
+self.TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+self.ImageLabel.Parent = self.Self
+self.ImageLabel.BackgroundColor3 = Color3.fromRGB(100, 176, 206)
+self.ImageLabel.BackgroundTransparency = 1.000
+self.ImageLabel.Position = UDim2.new(0.224999994, 0, 0.294117659, 0)
+self.ImageLabel.Size = UDim2.new(0, 17, 0, 11)
+self.ImageLabel.Image = "rbxassetid://2795572800"
+self.ImageLabel.ImageColor3 = Color3.fromRGB(6, 176, 255)
+self.ImageLabel.ScaleType = Enum.ScaleType.Fit
+
+self.UICorner_2.CornerRadius = UDim.new(0, 4)
+self.UICorner_2.Parent = self.Self
+
+self.UIListLayout_2.Parent = self.Entites_2
+self.UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+self.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+self.UIListLayout_2.Padding = UDim.new(0, 3)
+
+self.World.Name = "World"
+self.World.Parent = self.Entites_2
+self.World.BackgroundColor3 = Color3.fromRGB(191, 191, 191)
+self.World.BackgroundTransparency = 1.000
+self.World.Position = UDim2.new(0.0420391075, 0, 0.38265273, 0)
+self.World.Size = UDim2.new(0, 160, 0, 34)
+self.World.Visible = false
+
+self.A_2.Name = "A"
+self.A_2.Parent = self.World
+self.A_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.A_2.BackgroundTransparency = 1.000
+self.A_2.Size = UDim2.new(0, 160, 0, 34)
+self.A_2.Visible = false
+self.A_2.Font = Enum.Font.SourceSans
+self.A_2.Text = ""
+self.A_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+self.A_2.TextSize = 14.000
+
+self.ImageLabel_2.Parent = self.World
+self.ImageLabel_2.BackgroundColor3 = Color3.fromRGB(91, 161, 188)
+self.ImageLabel_2.BackgroundTransparency = 1.000
+self.ImageLabel_2.Position = UDim2.new(0.224999994, 0, 0.225160033, 0)
+self.ImageLabel_2.Size = UDim2.new(0, 17, 0, 17)
+self.ImageLabel_2.Image = "rbxassetid://10507357657"
+self.ImageLabel_2.ImageColor3 = Color3.fromRGB(100, 176, 206)
+self.ImageLabel_2.ScaleType = Enum.ScaleType.Fit
+
+self.UICorner_3.CornerRadius = UDim.new(0, 4)
+self.UICorner_3.Parent = self.World
+
+self.TextLabel_2.Parent = self.World
+self.TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.TextLabel_2.BackgroundTransparency = 1.000
+self.TextLabel_2.Position = UDim2.new(0.40625, 0, 0.294117659, 0)
+self.TextLabel_2.Size = UDim2.new(0, 108, 0, 14)
+self.TextLabel_2.Font = Enum.Font.SourceSans
+self.TextLabel_2.Text = "World"
+self.TextLabel_2.TextColor3 = Color3.fromRGB(162, 162, 162)
+self.TextLabel_2.TextScaled = true
+self.TextLabel_2.TextSize = 16.000
+self.TextLabel_2.TextWrapped = true
+self.TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+self.UIListLayout_3.Parent = self.List
+self.UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+self.UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+self.UIListLayout_3.Padding = UDim.new(0, 100)
+
+self.Misc.Name = "Misc"
+self.Misc.Parent = self.List
+self.Misc.BackgroundColor3 = Color3.fromRGB(33, 38, 61)
+self.Misc.BackgroundTransparency = 1.000
+self.Misc.Position = UDim2.new(0.134396628, 0, 0.00751355384, 0)
+self.Misc.Size = UDim2.new(0, 167, 0, 22)
+self.Misc.Font = Enum.Font.SourceSans
+self.Misc.Text = "MIsc"
+self.Misc.TextColor3 = Color3.fromRGB(21, 33, 54)
+self.Misc.TextSize = 15.000
+self.Misc.TextWrapped = true
+self.Misc.TextXAlignment = Enum.TextXAlignment.Left
+
+self.Misc_2.Name = "Misc"
+self.Misc_2.Parent = self.Misc
+self.Misc_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.Misc_2.BackgroundTransparency = 1.000
+self.Misc_2.Position = UDim2.new(-0.0415748097, 0, 1.37265742, 0)
+self.Misc_2.Size = UDim2.new(0, 160, 0, 186)
+
+self.UIListLayout_4.Parent = self.Misc_2
+self.UIListLayout_4.HorizontalAlignment = Enum.HorizontalAlignment.Center
+self.UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+self.UIListLayout_4.Padding = UDim.new(0, 3)
+
+self.Settings.Name = "Settings"
+self.Settings.Parent = self.Misc_2
+self.Settings.BackgroundColor3 = Color3.fromRGB(191, 191, 191)
+self.Settings.BackgroundTransparency = 1.000
+self.Settings.Position = UDim2.new(0.0420391075, 0, 0.38265273, 0)
+self.Settings.Size = UDim2.new(0, 160, 0, 34)
+self.Settings.Visible = false
+
+self.A_3.Name = "A"
+self.A_3.Parent = self.Settings
+self.A_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.A_3.BackgroundTransparency = 1.000
+self.A_3.Size = UDim2.new(0, 160, 0, 34)
+self.A_3.Font = Enum.Font.SourceSans
+self.A_3.Text = ""
+self.A_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+self.A_3.TextSize = 14.000
+
+self.ImageLabel_3.Parent = self.Settings
+self.ImageLabel_3.BackgroundColor3 = Color3.fromRGB(91, 161, 188)
+self.ImageLabel_3.BackgroundTransparency = 1.000
+self.ImageLabel_3.Position = UDim2.new(0.224999994, 0, 0.225160033, 0)
+self.ImageLabel_3.Size = UDim2.new(0, 17, 0, 17)
+self.ImageLabel_3.Image = "rbxassetid://3687980595"
+self.ImageLabel_3.ImageColor3 = Color3.fromRGB(100, 176, 206)
+self.ImageLabel_3.ScaleType = Enum.ScaleType.Fit
+
+self.UICorner_4.CornerRadius = UDim.new(0, 4)
+self.UICorner_4.Parent = self.Settings
+
+self.TextLabel_3.Parent = self.Settings
+self.TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.TextLabel_3.BackgroundTransparency = 1.000
+self.TextLabel_3.Position = UDim2.new(0.40625, 0, 0.294117659, 0)
+self.TextLabel_3.Size = UDim2.new(0, 108, 0, 14)
+self.TextLabel_3.Font = Enum.Font.SourceSans
+self.TextLabel_3.Text = "Settings"
+self.TextLabel_3.TextColor3 = Color3.fromRGB(162, 162, 162)
+self.TextLabel_3.TextScaled = true
+self.TextLabel_3.TextSize = 16.000
+self.TextLabel_3.TextWrapped = true
+self.TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+
+self.UICorner_5.CornerRadius = UDim.new(0, 4)
+self.UICorner_5.Parent = self.SideList
+
+self.Frame.Parent = self.SideList
+self.Frame.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.Frame.BorderSizePixel = 0
+self.Frame.Position = UDim2.new(0.927461147, 0, 0, 0)
+self.Frame.Size = UDim2.new(0, 14, 0, 423)
+
+self.Tabs.Name = "Tabs"
+self.Tabs.Parent = self.MainFrame
+
+self.Self_2.Name = "Self"
+self.Self_2.Parent = self.Tabs
+self.Self_2.Active = true
+self.Self_2.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.Self_2.BackgroundTransparency = 1.000
+self.Self_2.BorderSizePixel = 0
+self.Self_2.Position = UDim2.new(0.254493654, 0, 0.00918341056, 0)
+self.Self_2.Size = UDim2.new(0, 562, 0, 415)
+self.Self_2.ZIndex = 2
+self.Self_2.ScrollBarThickness = 3
+self.Self_2.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+
+self.Modifers.Name = "Modifers"
+self.Modifers.Parent = self.Self_2
+self.Modifers.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.Modifers.BorderColor3 = Color3.fromRGB(27, 42, 53)
+self.Modifers.Position = UDim2.new(0.0266369265, 0, 0.00426498801, 0)
+self.Modifers.Size = UDim2.new(0, 223, 0, 444)
+self.Modifers.Visible = false
+
+self.UICorner_6.CornerRadius = UDim.new(0, 4)
+self.UICorner_6.Parent = self.Modifers
+
+self.TabName.Name = "TabName"
+self.TabName.Parent = self.Modifers
+self.TabName.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.TabName.BackgroundTransparency = 1.000
+self.TabName.Position = UDim2.new(0.0535861962, 0, 0.0189345498, 0)
+self.TabName.Size = UDim2.new(0, 167, 0, 22)
+self.TabName.Font = Enum.Font.SourceSans
+self.TabName.LineHeight = 1.440
+self.TabName.Text = "Modifers"
+self.TabName.TextColor3 = Color3.fromRGB(30, 58, 85)
+self.TabName.TextSize = 15.000
+self.TabName.TextWrapped = true
+self.TabName.TextXAlignment = Enum.TextXAlignment.Left
+
+self.Godmode.Name = "Godmode"
+self.Godmode.Parent = self.Modifers
+self.Godmode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.Godmode.BackgroundTransparency = 1.000
+self.Godmode.Position = UDim2.new(0.0493273549, 0, 0.103603601, 0)
+self.Godmode.Size = UDim2.new(0, 200, 0, 27)
+
+self.ToggleCheck.Name = "ToggleCheck"
+self.ToggleCheck.Parent = self.Godmode
+self.ToggleCheck.BackgroundColor3 = Color3.fromRGB(21, 29, 36)
+self.ToggleCheck.BorderSizePixel = 0
+self.ToggleCheck.Position = UDim2.new(0.00474853441, 0, -0.0076252725, 0)
+self.ToggleCheck.Size = UDim2.new(0, 26, 0, 26)
+self.ToggleCheck.Font = Enum.Font.SourceSans
+self.ToggleCheck.Text = ""
+self.ToggleCheck.TextColor3 = Color3.fromRGB(0, 0, 0)
+self.ToggleCheck.TextSize = 14.000
+
+self.UICorner_7.Parent = self.ToggleCheck
+
+self.Checkmarked.Name = "Checkmarked"
+self.Checkmarked.Parent = self.ToggleCheck
+self.Checkmarked.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.Checkmarked.BackgroundTransparency = 1.000
+self.Checkmarked.Position = UDim2.new(0.00499999989, 0, -0.00800000038, 0)
+self.Checkmarked.Size = UDim2.new(0, 26, 0, 26)
+self.Checkmarked.Visible = false
+self.Checkmarked.Image = "http://www.roblox.com/asset/?id=1202200114"
+
+self.Name.Name = "Name"
+self.Name.Parent = self.Godmode
+self.Name.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.Name.BackgroundTransparency = 1.000
+self.Name.Position = UDim2.new(0.218586117, 0, 0.136581421, 0)
+self.Name.Size = UDim2.new(0, 143, 0, 17)
+self.Name.Font = Enum.Font.SourceSans
+self.Name.LineHeight = 1.440
+self.Name.Text = "Godmode"
+self.Name.TextColor3 = Color3.fromRGB(194, 194, 194)
+self.Name.TextSize = 15.000
+self.Name.TextWrapped = true
+self.Name.TextXAlignment = Enum.TextXAlignment.Left
+
+self.Actions.Name = "Actions"
+self.Actions.Parent = self.Self_2
+self.Actions.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.Actions.Position = UDim2.new(0.596703291, 0, 0.00355431065, 0)
+self.Actions.Size = UDim2.new(0, 197, 0, 308)
+self.Actions.Visible = false
+
+self.UICorner_8.CornerRadius = UDim.new(0, 4)
+self.UICorner_8.Parent = self.Actions
+
+self.TabName_2.Name = "TabName"
+self.TabName_2.Parent = self.Actions
+self.TabName_2.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.TabName_2.BackgroundTransparency = 1.000
+self.TabName_2.Position = UDim2.new(0.0721152499, 0, 0.0282068085, 0)
+self.TabName_2.Size = UDim2.new(0, 167, 0, 22)
+self.TabName_2.Font = Enum.Font.SourceSans
+self.TabName_2.LineHeight = 1.440
+self.TabName_2.Text = "Actions"
+self.TabName_2.TextColor3 = Color3.fromRGB(30, 58, 85)
+self.TabName_2.TextSize = 15.000
+self.TabName_2.TextWrapped = true
+self.TabName_2.TextXAlignment = Enum.TextXAlignment.Left
+
+self.Sucide.Name = "Sucide"
+self.Sucide.Parent = self.Actions
+self.Sucide.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+self.Sucide.Position = UDim2.new(0.069631815, 0, 0.145811409, 0)
+self.Sucide.Size = UDim2.new(0, 167, 0, 27)
+
+self.UICorner_9.CornerRadius = UDim.new(0, 4)
+self.UICorner_9.Parent = self.Sucide
+
+self.ImageButton.Parent = self.Sucide
+self.ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.ImageButton.BackgroundTransparency = 1.000
+self.ImageButton.Position = UDim2.new(0.0029296875, 0, 0, 0)
+self.ImageButton.Size = UDim2.new(0, 165, 0, 27)
+self.ImageButton.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+self.ImageButton.ImageTransparency = 1.000
+
+self.Name_2.Name = "Name"
+self.Name_2.Parent = self.Sucide
+self.Name_2.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.Name_2.BackgroundTransparency = 1.000
+self.Name_2.Position = UDim2.new(0, 0, 0.173618451, 0)
+self.Name_2.Size = UDim2.new(0, 177, 0, 17)
+self.Name_2.Font = Enum.Font.SourceSans
+self.Name_2.LineHeight = 1.440
+self.Name_2.Text = "Sucide"
+self.Name_2.TextColor3 = Color3.fromRGB(194, 194, 194)
+self.Name_2.TextSize = 15.000
+self.Name_2.TextWrapped = true
+
+self.Stats.Name = "Stats"
+self.Stats.Parent = self.Self_2
+self.Stats.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.Stats.Position = UDim2.new(0.0270000007, 0, 0.00400000019, 0)
+self.Stats.Size = UDim2.new(0, 197, 0, 332)
+
+self.UICorner_10.CornerRadius = UDim.new(0, 4)
+self.UICorner_10.Parent = self.Stats
+
+self.TabName_3.Name = "TabName"
+self.TabName_3.Parent = self.Stats
+self.TabName_3.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.TabName_3.BackgroundTransparency = 1.000
+self.TabName_3.Position = UDim2.new(0.0721152499, 0, 0.0282068085, 0)
+self.TabName_3.Size = UDim2.new(0, 167, 0, 22)
+self.TabName_3.Font = Enum.Font.SourceSans
+self.TabName_3.LineHeight = 1.440
+self.TabName_3.Text = "Stats"
+self.TabName_3.TextColor3 = Color3.fromRGB(30, 58, 85)
+self.TabName_3.TextSize = 15.000
+self.TabName_3.TextWrapped = true
+self.TabName_3.TextXAlignment = Enum.TextXAlignment.Left
+
+self.MoneyAmoubt.Name = "Money Amoubt"
+self.MoneyAmoubt.Parent = self.Stats
+self.MoneyAmoubt.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+self.MoneyAmoubt.Position = UDim2.new(0.0764949843, 0, 0.119077131, 0)
+self.MoneyAmoubt.Size = UDim2.new(0, 167, 0, 27)
+
+self.Box.Name = "Box"
+self.Box.Parent = self.MoneyAmoubt
+self.Box.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.Box.BackgroundTransparency = 1.000
+self.Box.Position = UDim2.new(0.0567897409, 0, 0.0370370373, 0)
+self.Box.Size = UDim2.new(0, 156, 0, 24)
+self.Box.Font = Enum.Font.SourceSans
+self.Box.PlaceholderText = "Money Amount"
+self.Box.Text = ""
+self.Box.TextColor3 = Color3.fromRGB(214, 214, 214)
+self.Box.TextSize = 17.000
+self.Box.TextXAlignment = Enum.TextXAlignment.Left
+
+self.UICorner_11.CornerRadius = UDim.new(0, 4)
+self.UICorner_11.Parent = self.MoneyAmoubt
+
+self.Give.Name = "Give"
+self.Give.Parent = self.Stats
+self.Give.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+self.Give.Position = UDim2.new(0.075000003, 0, 0.220261708, 0)
+self.Give.Size = UDim2.new(0, 167, 0, 27)
+
+self.UICorner_12.CornerRadius = UDim.new(0, 4)
+self.UICorner_12.Parent = self.Give
+
+self.ImageButton_2.Parent = self.Give
+self.ImageButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.ImageButton_2.BackgroundTransparency = 1.000
+self.ImageButton_2.Position = UDim2.new(0.0029296875, 0, 0, 0)
+self.ImageButton_2.Size = UDim2.new(0, 165, 0, 27)
+self.ImageButton_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+self.ImageButton_2.ImageTransparency = 1.000
+
+self.Name_3.Name = "Name"
+self.Name_3.Parent = self.Give
+self.Name_3.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.Name_3.BackgroundTransparency = 1.000
+self.Name_3.Position = UDim2.new(0.00176362367, 0, 0.173617899, 0)
+self.Name_3.Size = UDim2.new(0, 164, 0, 17)
+self.Name_3.Font = Enum.Font.SourceSans
+self.Name_3.LineHeight = 1.320
+self.Name_3.Text = "Give"
+self.Name_3.TextColor3 = Color3.fromRGB(194, 194, 194)
+self.Name_3.TextSize = 16.000
+self.Name_3.TextWrapped = true
+
+self.World_2.Name = "World"
+self.World_2.Parent = self.Tabs
+self.World_2.Active = true
+self.World_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.World_2.BackgroundTransparency = 1.000
+self.World_2.BorderSizePixel = 0
+self.World_2.Position = UDim2.new(0.254000008, 0, 0.00899999961, 0)
+self.World_2.Size = UDim2.new(0, 562, 0, 415)
+self.World_2.Visible = false
+self.World_2.ZIndex = 2
+self.World_2.ScrollBarThickness = 0
+self.World_2.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+self.World_2.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+self.Spawner.Name = "Spawner"
+self.Spawner.Parent = self.World_2
+self.Spawner.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.Spawner.Position = UDim2.new(0.00662963092, 0, 0.00155501231, 0)
+self.Spawner.Size = UDim2.new(0, 260, 0, 308)
+
+self.UICorner_13.CornerRadius = UDim.new(0, 4)
+self.UICorner_13.Parent = self.Spawner
+
+self.TabName_4.Name = "TabName"
+self.TabName_4.Parent = self.Spawner
+self.TabName_4.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.TabName_4.BackgroundTransparency = 1.000
+self.TabName_4.Position = UDim2.new(0.0721152499, 0, 0.0282068085, 0)
+self.TabName_4.Size = UDim2.new(0, 167, 0, 22)
+self.TabName_4.Font = Enum.Font.SourceSans
+self.TabName_4.LineHeight = 1.440
+self.TabName_4.Text = "Chest"
+self.TabName_4.TextColor3 = Color3.fromRGB(30, 58, 85)
+self.TabName_4.TextSize = 15.000
+self.TabName_4.TextWrapped = true
+self.TabName_4.TextXAlignment = Enum.TextXAlignment.Left
+
+self.Respawnnearestchest.Name = "Respawn nearest chest"
+self.Respawnnearestchest.Parent = self.Spawner
+self.Respawnnearestchest.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+self.Respawnnearestchest.Position = UDim2.new(0.0696317255, 0, 0.145811409, 0)
+self.Respawnnearestchest.Size = UDim2.new(0, 185, 0, 27)
+
+self.UICorner_14.CornerRadius = UDim.new(0, 4)
+self.UICorner_14.Parent = self.Respawnnearestchest
+
+self.ImageButton_3.Parent = self.Respawnnearestchest
+self.ImageButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.ImageButton_3.BackgroundTransparency = 1.000
+self.ImageButton_3.Position = UDim2.new(0.0029296875, 0, 0, 0)
+self.ImageButton_3.Size = UDim2.new(0, 165, 0, 27)
+self.ImageButton_3.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+self.ImageButton_3.ImageTransparency = 1.000
+
+self.Name_4.Name = "Name"
+self.Name_4.Parent = self.Respawnnearestchest
+self.Name_4.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.Name_4.BackgroundTransparency = 1.000
+self.Name_4.Position = UDim2.new(0.00893368945, 0, 0.173619017, 0)
+self.Name_4.Size = UDim2.new(0, 182, 0, 17)
+self.Name_4.Font = Enum.Font.SourceSans
+self.Name_4.LineHeight = 1.440
+self.Name_4.Text = "Repawn nearest chest"
+self.Name_4.TextColor3 = Color3.fromRGB(194, 194, 194)
+self.Name_4.TextSize = 15.000
+self.Name_4.TextWrapped = true
+
+self.Esp.Name = "Esp"
+self.Esp.Parent = self.World_2
+self.Esp.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.Esp.Position = UDim2.new(0.571120918, 0, 0.0025289217, 0)
+self.Esp.Size = UDim2.new(0, 223, 0, 166)
+
+self.UICorner_15.CornerRadius = UDim.new(0, 4)
+self.UICorner_15.Parent = self.Esp
+
+self.TabName_5.Name = "TabName"
+self.TabName_5.Parent = self.Esp
+self.TabName_5.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.TabName_5.BackgroundTransparency = 1.000
+self.TabName_5.Position = UDim2.new(0.0535861962, 0, 0.0189345498, 0)
+self.TabName_5.Size = UDim2.new(0, 167, 0, 22)
+self.TabName_5.Font = Enum.Font.SourceSans
+self.TabName_5.LineHeight = 1.440
+self.TabName_5.Text = "Esp ( SOON )"
+self.TabName_5.TextColor3 = Color3.fromRGB(30, 58, 85)
+self.TabName_5.TextSize = 15.000
+self.TabName_5.TextWrapped = true
+self.TabName_5.TextXAlignment = Enum.TextXAlignment.Left
+
+self.EspFloorLoot.Name = "EspFloorLoot"
+self.EspFloorLoot.Parent = self.Esp
+self.EspFloorLoot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.EspFloorLoot.BackgroundTransparency = 1.000
+self.EspFloorLoot.Position = UDim2.new(0.0493273549, 0, 0.103603601, 0)
+self.EspFloorLoot.Size = UDim2.new(0, 200, 0, 27)
+self.EspFloorLoot.Visible = false
+
+self.ToggleCheck_2.Name = "ToggleCheck"
+self.ToggleCheck_2.Parent = self.EspFloorLoot
+self.ToggleCheck_2.BackgroundColor3 = Color3.fromRGB(21, 29, 36)
+self.ToggleCheck_2.BorderSizePixel = 0
+self.ToggleCheck_2.Position = UDim2.new(0.00474853441, 0, 0.5479303, 0)
+self.ToggleCheck_2.Size = UDim2.new(0, 26, 0, 26)
+self.ToggleCheck_2.Font = Enum.Font.SourceSans
+self.ToggleCheck_2.Text = ""
+self.ToggleCheck_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+self.ToggleCheck_2.TextSize = 14.000
+
+self.UICorner_16.Parent = self.ToggleCheck_2
+
+self.Checkmarked_2.Name = "Checkmarked"
+self.Checkmarked_2.Parent = self.ToggleCheck_2
+self.Checkmarked_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.Checkmarked_2.BackgroundTransparency = 1.000
+self.Checkmarked_2.Position = UDim2.new(0.00499999989, 0, -0.00800000038, 0)
+self.Checkmarked_2.Size = UDim2.new(0, 26, 0, 26)
+self.Checkmarked_2.Visible = false
+self.Checkmarked_2.Image = "http://www.roblox.com/asset/?id=1202200114"
+
+self.Name_5.Name = "Name"
+self.Name_5.Parent = self.EspFloorLoot
+self.Name_5.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.Name_5.BackgroundTransparency = 1.000
+self.Name_5.Position = UDim2.new(0.218586117, 0, 0.692137003, 0)
+self.Name_5.Size = UDim2.new(0, 143, 0, 17)
+self.Name_5.Font = Enum.Font.SourceSans
+self.Name_5.LineHeight = 1.440
+self.Name_5.Text = "Floorloot esp"
+self.Name_5.TextColor3 = Color3.fromRGB(194, 194, 194)
+self.Name_5.TextSize = 15.000
+self.Name_5.TextWrapped = true
+self.Name_5.TextXAlignment = Enum.TextXAlignment.Left
+
+self.Settings_2.Name = "Settings"
+self.Settings_2.Parent = self.Tabs
+self.Settings_2.Active = true
+self.Settings_2.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.Settings_2.BackgroundTransparency = 1.000
+self.Settings_2.BorderSizePixel = 0
+self.Settings_2.Position = UDim2.new(0.254493654, 0, 0.00918341056, 0)
+self.Settings_2.Size = UDim2.new(0, 562, 0, 415)
+self.Settings_2.Visible = false
+self.Settings_2.ZIndex = 2
+self.Settings_2.ScrollBarThickness = 3
+self.Settings_2.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+
+self.Actions_2.Name = "Actions"
+self.Actions_2.Parent = self.Settings_2
+self.Actions_2.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.Actions_2.Position = UDim2.new(0.596703291, 0, 0.0156025039, 0)
+self.Actions_2.Size = UDim2.new(0, 197, 0, 308)
+self.Actions_2.Visible = false
+
+self.UICorner_17.CornerRadius = UDim.new(0, 4)
+self.UICorner_17.Parent = self.Actions_2
+
+self.TabName_6.Name = "TabName"
+self.TabName_6.Parent = self.Actions_2
+self.TabName_6.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.TabName_6.BackgroundTransparency = 1.000
+self.TabName_6.Position = UDim2.new(0.0721152499, 0, 0.0282068085, 0)
+self.TabName_6.Size = UDim2.new(0, 167, 0, 22)
+self.TabName_6.Font = Enum.Font.SourceSans
+self.TabName_6.LineHeight = 1.440
+self.TabName_6.Text = "Actions"
+self.TabName_6.TextColor3 = Color3.fromRGB(30, 58, 85)
+self.TabName_6.TextSize = 15.000
+self.TabName_6.TextWrapped = true
+self.TabName_6.TextXAlignment = Enum.TextXAlignment.Left
+
+self.Sucide_2.Name = "Sucide"
+self.Sucide_2.Parent = self.Actions_2
+self.Sucide_2.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+self.Sucide_2.Position = UDim2.new(0.069631815, 0, 0.145811409, 0)
+self.Sucide_2.Size = UDim2.new(0, 167, 0, 27)
+
+self.UICorner_18.CornerRadius = UDim.new(0, 4)
+self.UICorner_18.Parent = self.Sucide_2
+
+self.ImageButton_4.Parent = self.Sucide_2
+self.ImageButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.ImageButton_4.BackgroundTransparency = 1.000
+self.ImageButton_4.Position = UDim2.new(0.0029296875, 0, 0, 0)
+self.ImageButton_4.Size = UDim2.new(0, 165, 0, 27)
+self.ImageButton_4.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+self.ImageButton_4.ImageTransparency = 1.000
+
+self.Name_6.Name = "Name"
+self.Name_6.Parent = self.Sucide_2
+self.Name_6.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.Name_6.BackgroundTransparency = 1.000
+self.Name_6.Position = UDim2.new(0, 0, 0.173618451, 0)
+self.Name_6.Size = UDim2.new(0, 167, 0, 17)
+self.Name_6.Font = Enum.Font.SourceSans
+self.Name_6.LineHeight = 1.440
+self.Name_6.Text = "Sucide"
+self.Name_6.TextColor3 = Color3.fromRGB(194, 194, 194)
+self.Name_6.TextSize = 15.000
+self.Name_6.TextWrapped = true
+
+self.CreateSave.Name = "Create & Save"
+self.CreateSave.Parent = self.Settings_2
+self.CreateSave.BackgroundColor3 = Color3.fromRGB(3, 8, 11)
+self.CreateSave.Position = UDim2.new(0.0130562559, 0, 0.0121270614, 0)
+self.CreateSave.Size = UDim2.new(0, 240, 0, 114)
+
+self.UICorner_19.CornerRadius = UDim.new(0, 4)
+self.UICorner_19.Parent = self.CreateSave
+
+self.TabName_7.Name = "TabName"
+self.TabName_7.Parent = self.CreateSave
+self.TabName_7.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.TabName_7.BackgroundTransparency = 1.000
+self.TabName_7.Position = UDim2.new(0.0721152499, 0, 0.0282068085, 0)
+self.TabName_7.Size = UDim2.new(0, 167, 0, 22)
+self.TabName_7.Font = Enum.Font.SourceSans
+self.TabName_7.LineHeight = 1.440
+self.TabName_7.Text = "Create & Save"
+self.TabName_7.TextColor3 = Color3.fromRGB(30, 58, 85)
+self.TabName_7.TextSize = 15.000
+self.TabName_7.TextWrapped = true
+self.TabName_7.TextXAlignment = Enum.TextXAlignment.Left
+
+self.SkinName.Name = "SkinName"
+self.SkinName.Parent = self.CreateSave
+self.SkinName.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+self.SkinName.Position = UDim2.new(0.075000003, 0, 0.61182797, 0)
+self.SkinName.Size = UDim2.new(0, 202, 0, 27)
+
+self.UICorner_20.CornerRadius = UDim.new(0, 4)
+self.UICorner_20.Parent = self.SkinName
+
+self.ImageButton_5.Parent = self.SkinName
+self.ImageButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.ImageButton_5.BackgroundTransparency = 1.000
+self.ImageButton_5.Position = UDim2.new(0.0029296875, 0, 0, 0)
+self.ImageButton_5.Size = UDim2.new(0, 165, 0, 27)
+self.ImageButton_5.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+self.ImageButton_5.ImageTransparency = 1.000
+
+self.Name_7.Name = "Name"
+self.Name_7.Parent = self.SkinName
+self.Name_7.BackgroundColor3 = Color3.fromRGB(51, 61, 97)
+self.Name_7.BackgroundTransparency = 1.000
+self.Name_7.Position = UDim2.new(0, 0, 0.173618451, 0)
+self.Name_7.Size = UDim2.new(0, 202, 0, 17)
+self.Name_7.Font = Enum.Font.SourceSans
+self.Name_7.LineHeight = 1.320
+self.Name_7.Text = "Create & save new config"
+self.Name_7.TextColor3 = Color3.fromRGB(194, 194, 194)
+self.Name_7.TextSize = 16.000
+self.Name_7.TextWrapped = true
+
+self.Text.Name = "Text"
+self.Text.Parent = self.CreateSave
+self.Text.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+self.Text.Position = UDim2.new(0.0764949843, 0, 0.263655454, 0)
+self.Text.Size = UDim2.new(0, 202, 0, 27)
+
+self.Box_2.Name = "Box"
+self.Box_2.Parent = self.Text
+self.Box_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+self.Box_2.BackgroundTransparency = 1.000
+self.Box_2.Position = UDim2.new(0.0567897409, 0, 0.0370370373, 0)
+self.Box_2.Size = UDim2.new(0, 156, 0, 24)
+self.Box_2.Font = Enum.Font.SourceSans
+self.Box_2.Text = ""
+self.Box_2.TextColor3 = Color3.fromRGB(214, 214, 214)
+self.Box_2.TextSize = 17.000
+self.Box_2.TextXAlignment = Enum.TextXAlignment.Left
+
+self.UICorner_21.CornerRadius = UDim.new(0, 4)
+self.UICorner_21.Parent = self.Text
+
+self.UIStroke.Parent = self.MainFrame
+
+
+-- Scripts:
+local function VGEPXN_fake_script() -- A.LocalScript 
+	local script = Instance.new('LocalScript', self.A)
+
+	local CheckGui = game.CoreGui:FindFirstChild('ModMenu')
+	local GuiTabs = CheckGui.MainFrame.Tabs
+	
+	local Name = script.Parent.Parent.TextLabel
+	local Frame = "Self"
+	
+	local speed = 0.10
+	script.Parent.MouseEnter:Connect(function()
+		local tween = game:GetService("TweenService"):Create(Name, TweenInfo.new(speed), {Position = UDim2.new(0.45, 0,0.294, 0)})
+		tween:Play()
+		script.Parent.Parent.Parent[Frame].BackgroundTransparency = 0.91
+		script.Parent.Parent.A.TextColor3 = Color3.fromRGB(225, 225, 225)
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		local tween = game:GetService("TweenService"):Create(Name, TweenInfo.new(speed), {Position = UDim2.new(0.406, 0,0.294, 0)})
+		tween:Play()
+		script.Parent.Parent.A.TextColor3 = Color3.fromRGB(162, 162, 162)
+		script.Parent.Parent.Parent[Frame].BackgroundTransparency = 1
+		script.Parent.MouseButton1Click:Connect(function()
+			for i,v in pairs(GuiTabs:GetChildren()) do
+				if v.Name == Frame then
+					v.Visible = true
+				else
+					v.Visible = false
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(VGEPXN_fake_script)()
+local function DNYF_fake_script() -- A_2.LocalScript 
+	local script = Instance.new('LocalScript', self.A_2)
+
+	local CheckGui = game.CoreGui:FindFirstChild('ModMenu')
+	
+	local GuiTabs = CheckGui.MainFrame.Tabs
+	
+	local Name = script.Parent.Parent.TextLabel
+	local Frame = "World"
+	
+	local speed = 0.10
+	script.Parent.MouseEnter:Connect(function()
+		local tween = game:GetService("TweenService"):Create(Name, TweenInfo.new(speed), {Position = UDim2.new(0.45, 0,0.294, 0)})
+		tween:Play()
+		script.Parent.Parent.Parent[Frame].BackgroundTransparency = 0.91
+		script.Parent.Parent.A.TextColor3 = Color3.fromRGB(225, 225, 225)
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		local tween = game:GetService("TweenService"):Create(Name, TweenInfo.new(speed), {Position = UDim2.new(0.406, 0,0.294, 0)})
+		tween:Play()
+		script.Parent.Parent.A.TextColor3 = Color3.fromRGB(162, 162, 162)
+		script.Parent.Parent.Parent[Frame].BackgroundTransparency = 1
+		script.Parent.MouseButton1Click:Connect(function()
+			for i,v in pairs(GuiTabs:GetChildren()) do
+				if v.Name == Frame then
+					v.Visible = true
+				else
+					v.Visible = false
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(DNYF_fake_script)()
+local function ZEYM_fake_script() -- A_3.LocalScript 
+	local script = Instance.new('LocalScript', self.A_3)
+
+	local CheckGui = game.CoreGui:FindFirstChild('ModMenu')
+	
+	local GuiTabs = CheckGui.MainFrame.Tabs
+	
+	local Name = script.Parent.Parent.TextLabel
+	local Frame = "Settings"
+	
+	local speed = 0.10
+	script.Parent.MouseEnter:Connect(function()
+		local tween = game:GetService("TweenService"):Create(Name, TweenInfo.new(speed), {Position = UDim2.new(0.45, 0,0.294, 0)})
+		tween:Play()
+		script.Parent.Parent.Parent[Frame].BackgroundTransparency = 0.91
+		script.Parent.Parent.A.TextColor3 = Color3.fromRGB(225, 225, 225)
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		local tween = game:GetService("TweenService"):Create(Name, TweenInfo.new(speed), {Position = UDim2.new(0.406, 0,0.294, 0)})
+		tween:Play()
+		script.Parent.Parent.A.TextColor3 = Color3.fromRGB(162, 162, 162)
+		script.Parent.Parent.Parent[Frame].BackgroundTransparency = 1
+		script.Parent.MouseButton1Click:Connect(function()
+			for i,v in pairs(GuiTabs:GetChildren()) do
+				if v.Name == Frame then
+					v.Visible = true
+				else
+					v.Visible = false
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(ZEYM_fake_script)()
+local function WZKPNY_fake_script() -- ToggleCheck.LocalScript 
+	local script = Instance.new('LocalScript', self.ToggleCheck)
+
+	
+	local enabled = false
+	local function updateScreen()
+		if enabled == true then
+			script.Parent.BackgroundColor3 = Color3.fromRGB(79, 190, 237)
+			script.Parent.Checkmarked.Visible = true
+			--//
+			-- Script here
+		else
+			script.Parent.BackgroundColor3 = Color3.fromRGB(21, 29, 36)
+			script.Parent.Checkmarked.Visible = false
+			--//
+			-- script here
+		end
+	end
+	updateScreen()
+	script.Parent.MouseButton1Click:Connect(function()
+		enabled = not enabled
+		updateScreen()
+	end)
+end
+coroutine.wrap(WZKPNY_fake_script)()
+local function WOCYSEZ_fake_script() -- ImageButton_2.LocalScript 
+	local script = Instance.new('LocalScript', self.ImageButton_2)
+
+	
+	local Frame = script.Parent.Parent.Parent['Give']
+	
+	script.Parent.MouseEnter:Connect(function()
+		Frame.BackgroundColor3 = Color3.fromRGB(31, 46, 58)
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		Frame.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+	end)
+	script.Parent.MouseButton1Down:Connect(function()
+		Frame.BackgroundColor3 = Color3.fromRGB(33, 49, 62)
+		local GiveM = {
+			[1] = false,
+			[2] = script.Parent.Parent.Parent["Money Amoubt"].Box.Text,
+			[3] = "Cash",
+			[4] = game:GetService("Players").LocalPlayer
+		}
+		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(GiveM))
+		task.wait(0.0)
+		Frame.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+	end)
+end
+coroutine.wrap(WOCYSEZ_fake_script)()
+local function JBFGU_fake_script() -- ImageButton_3.LocalScript 
+	local script = Instance.new('LocalScript', self.ImageButton_3)
+
+	
+	local Frame = script.Parent.Parent.Parent['Respawn nearest chest']
+	
+	script.Parent.MouseEnter:Connect(function()
+		Frame.BackgroundColor3 = Color3.fromRGB(26, 38, 48)
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		Frame.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+		script.Parent.MouseButton1Down:Connect(function()
+			Frame.BackgroundColor3 = Color3.fromRGB(30, 45, 57)
+		end)
+		script.Parent.MouseButton1Up:Connect(function()
+			Frame.BackgroundColor3 = Color3.fromRGB(20, 29, 36)
+			local closestDistance = 10
+			local closestChest = nil
+			for i,v in pairs(game.workspace.Chests:GetChildren()) do
+				local distance = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Bottom.Spawn.Position).magnitude
+				if distance < closestDistance then
+					closestDistance = distance
+					closestChest = v
+					v.Name = "Chest1"
+					game:GetService("ReplicatedStorage").Remotes.Chest:FireServer(workspace.Chests.Chest1)
+					v.Name = "Chest"
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(JBFGU_fake_script)()
+local function UZIBK_fake_script() -- ToggleCheck_2.LocalScript 
+	local script = Instance.new('LocalScript', self.ToggleCheck_2)
+
+	
+	local enabled = false
+	local function updateScreen()
+		if enabled == true then
+			script.Parent.BackgroundColor3 = Color3.fromRGB(79, 190, 237)
+			script.Parent.Checkmarked.Visible = true
+			--// 
+			print("true")
+			local color = Color3.fromRGB(255, 60, 79)
+			--[[ for i,v in pairs(game.workspace.Drops:GetChildren()) do
+				if v:FindFirstChild("ESP") then v:FindFirstChild("ESP"):Destroy() end
+				local a = Instance.new("BillboardGui",v)
+				a.Name = "ESP"
+				a.Size = UDim2.new(0,20, 0,20)
+				a.AlwaysOnTop = true
+				local b = Instance.new("Frame",a)
+				b.Size = UDim2.new(0,20, 0,20)
+				b.BackgroundTransparency = 0.50
+				b.BorderSizePixel = 0
+				b.BackgroundColor3 = color
+				local c = Instance.new('TextLabel',b)
+				c.Size = UDim2.new(1,1,0,1)
+				c.BorderSizePixel = 2
+				c.TextSize = 5
+				c.Text = v.Name
+				c.BackgroundTransparency = 1
+				c.TextColor3 = color
+				c.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+				c.TextStrokeTransparency = 0.1
+			end 
+			-->> Updater
+			local ChildAddedFunc = workspace.Drops.ChildAdded:Connect(function(T)
+				if T:FindFirstChild("ESP") then T:FindFirstChild("ESP"):Destroy() end
+				local a = Instance.new("BillboardGui",T)
+				a.Name = "ESP"
+				a.Size = UDim2.new(0,20, 0,20)
+				a.AlwaysOnTop = true
+				local b = Instance.new("Frame",a)
+				b.Size = UDim2.new(0,20, 0,20)
+				b.BackgroundTransparency = 0.50
+				b.BorderSizePixel = 0
+				b.BackgroundColor3 = color
+				local c = Instance.new('TextLabel',b)
+				c.Size = UDim2.new(1,1,0,1)
+				c.BorderSizePixel = 2
+				c.TextSize = 5
+				c.Text = T.Name
+				c.BackgroundTransparency = 1
+				c.TextColor3 = color
+				c.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+				c.TextStrokeTransparency = 0.1
+			end)]]
+		else
+			script.Parent.BackgroundColor3 = Color3.fromRGB(21, 29, 36)
+			script.Parent.Checkmarked.Visible = false
+			print("False")
+			--[[if ChildAddedFunc then
+					ChildAddedFunc:Disconnect()
+				end]]
+	  end
+	end  
+	updateScreen()
+	script.Parent.MouseButton1Click:Connect(function()
+		enabled = not enabled		
+		updateScreen()
+	end)
+end
+coroutine.wrap(UZIBK_fake_script)()
+local function LKCRAD_fake_script() -- MainFrame.Dragify 
+	local script = Instance.new('LocalScript', self.MainFrame)
+
+	local UIS = game:GetService("UserInputService")
+	local dragSpeed = -math.huge
+	
+	local dragToggle = nil
+	local dragInput = nil
+	local dragStart = nil
+	local dragPos = nil
+	
+	function dragify(Frame)
+		function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        script.Parent.Position = Position
+		end
+		
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+		end)
+		
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+		end)
+		
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(LKCRAD_fake_script)()
+local function ZIPT_fake_script() -- ModMenu.Keybind Script 
+	local script = Instance.new('LocalScript', self.ModMenu)
+
+	local UIS = game:GetService("UserInputService")
+	
+	local Frame = script.Parent.MainFrame 
+	local open = false
+	game:GetService("UserInputService").InputBegan:Connect(function(key, gp)
+	if key.KeyCode == Enum.KeyCode.Minus then
+	  if UIS:GetFocusedTextBox() == nil then
+	     if open == false then
+	     open = true 
+	     Frame.Visible = open
+	    elseif open == true then
+	     open = false
+	     Frame.Visible = open
+	      end
+	    end
+	   end
+	end)
+	
+end
+coroutine.wrap(ZIPT_fake_script)()
